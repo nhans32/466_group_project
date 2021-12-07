@@ -1,0 +1,527 @@
+('higher_yes',) with support: 0.9147509578544061
+('schoolsup_no',) with support: 0.8860153256704981
+('Pstatus_T',) with support: 0.8840996168582376
+('failures_0',) with support: 0.8247126436781609
+('higher_yes', 'Pstatus_T') with support: 0.8093869731800766
+('higher_yes', 'schoolsup_no') with support: 0.803639846743295
+('nursery_yes',) with support: 0.7998084291187739
+('internet_yes',) with support: 0.7921455938697318
+('paid_no',) with support: 0.789272030651341
+('Pstatus_T', 'schoolsup_no') with support: 0.7854406130268199
+('higher_yes', 'failures_0') with support: 0.7835249042145593
+('school_GP',) with support: 0.7394636015325671
+('higher_yes', 'nursery_yes') with support: 0.7365900383141762
+('higher_yes', 'internet_yes') with support: 0.7318007662835249
+('failures_0', 'schoolsup_no') with support: 0.7308429118773946
+('failures_0', 'Pstatus_T') with support: 0.7279693486590039
+('address_U',) with support: 0.7270114942528736
+('higher_yes', 'Pstatus_T', 'schoolsup_no') with support: 0.7136015325670498
+('internet_yes', 'Pstatus_T') with support: 0.7088122605363985
+('higher_yes', 'paid_no') with support: 0.7078544061302682
+('famsize_GT3',) with support: 0.7068965517241379
+('schoolsup_no', 'nursery_yes') with support: 0.7049808429118773
+('internet_yes', 'schoolsup_no') with support: 0.7040229885057471
+('paid_no', 'schoolsup_no') with support: 0.7021072796934866
+('Pstatus_T', 'nursery_yes') with support: 0.7001915708812261
+('guardian_mother',) with support: 0.6973180076628352
+('absences_-0.001_5.0',) with support: 0.696360153256705
+('Dalc_1',) with support: 0.696360153256705
+('higher_yes', 'failures_0', 'Pstatus_T') with support: 0.6934865900383141
+('higher_yes', 'school_GP') with support: 0.6925287356321839
+('paid_no', 'Pstatus_T') with support: 0.6925287356321839
+('higher_yes', 'failures_0', 'schoolsup_no') with support: 0.6896551724137931
+('address_U', 'higher_yes') with support: 0.6743295019157088
+('failures_0', 'nursery_yes') with support: 0.6695402298850575
+('internet_yes', 'failures_0') with support: 0.6637931034482759
+('famsize_GT3', 'Pstatus_T') with support: 0.6551724137931034
+('higher_yes', 'internet_yes', 'Pstatus_T') with support: 0.6532567049808429
+('higher_yes', 'Dalc_1') with support: 0.6522988505747126
+('school_GP', 'Pstatus_T') with support: 0.6503831417624522
+('failures_0', 'Pstatus_T', 'schoolsup_no') with support: 0.6494252873563219
+('higher_yes', 'famsize_GT3') with support: 0.646551724137931
+('higher_yes', 'internet_yes', 'schoolsup_no') with support: 0.646551724137931
+('romantic_no',) with support: 0.6446360153256705
+('failures_0', 'paid_no') with support: 0.6446360153256705
+('higher_yes', 'guardian_mother') with support: 0.6446360153256705
+('higher_yes', 'schoolsup_no', 'nursery_yes') with support: 0.6446360153256705
+('higher_yes', 'absences_-0.001_5.0') with support: 0.64272030651341
+('higher_yes', 'Pstatus_T', 'nursery_yes') with support: 0.64272030651341
+('address_U', 'schoolsup_no') with support: 0.6408045977011494
+('school_GP', 'schoolsup_no') with support: 0.6369731800766284
+('higher_yes', 'internet_yes', 'failures_0') with support: 0.6369731800766284
+('higher_yes', 'failures_0', 'nursery_yes') with support: 0.6350574712643678
+('internet_yes', 'nursery_yes') with support: 0.6331417624521073
+('address_U', 'Pstatus_T') with support: 0.632183908045977
+('Pstatus_T', 'absences_-0.001_5.0') with support: 0.6312260536398467
+('internet_yes', 'Pstatus_T', 'schoolsup_no') with support: 0.6302681992337165
+('failures_0', 'school_GP') with support: 0.6283524904214559
+('internet_yes', 'school_GP') with support: 0.6254789272030651
+('higher_yes', 'paid_no', 'schoolsup_no') with support: 0.6235632183908046
+('paid_no', 'nursery_yes') with support: 0.6226053639846744
+('class_type_por',) with support: 0.6216475095785441
+('higher_yes', 'paid_no', 'Pstatus_T') with support: 0.6206896551724138
+('Pstatus_T', 'schoolsup_no', 'nursery_yes') with support: 0.6206896551724138
+('famsize_GT3', 'schoolsup_no') with support: 0.6197318007662835
+('guardian_mother', 'schoolsup_no') with support: 0.6197318007662835
+('paid_no', 'Pstatus_T', 'schoolsup_no') with support: 0.6168582375478927
+('failures_0', 'schoolsup_no', 'higher_yes', 'Pstatus_T') with support: 0.6149425287356322
+('address_U', 'failures_0') with support: 0.6139846743295019
+('schoolsup_no', 'absences_-0.001_5.0') with support: 0.6139846743295019
+('famsup_yes',) with support: 0.6130268199233716
+('schoolsup_no', 'Dalc_1') with support: 0.6111111111111112
+('address_U', 'internet_yes') with support: 0.6111111111111112
+('Pstatus_T', 'Dalc_1') with support: 0.6091954022988506
+('higher_yes', 'school_GP', 'Pstatus_T') with support: 0.6082375478927203
+('higher_yes', 'failures_0', 'school_GP') with support: 0.60727969348659
+('internet_yes', 'paid_no') with support: 0.6063218390804598
+('guardian_mother', 'Pstatus_T') with support: 0.6063218390804598
+('higher_yes', 'failures_0', 'paid_no') with support: 0.6063218390804598
+('address_U', 'school_GP') with support: 0.6044061302681992
+('higher_yes', 'romantic_no') with support: 0.603448275862069
+('guardian_mother', 'failures_0') with support: 0.5977011494252874
+('failures_0', 'Dalc_1') with support: 0.5977011494252874
+('higher_yes', 'Pstatus_T', 'famsize_GT3') with support: 0.5977011494252874
+('traveltime_1',) with support: 0.5967432950191571
+('failures_0', 'absences_-0.001_5.0') with support: 0.5957854406130269
+('school_GP', 'nursery_yes') with support: 0.5948275862068966
+('internet_yes', 'failures_0', 'schoolsup_no') with support: 0.5938697318007663
+('higher_yes', 'school_GP', 'schoolsup_no') with support: 0.592911877394636
+('failures_0', 'schoolsup_no', 'nursery_yes') with support: 0.5909961685823755
+('internet_yes', 'failures_0', 'Pstatus_T') with support: 0.5909961685823755
+('address_U', 'failures_0', 'higher_yes') with support: 0.5909961685823755
+('address_U', 'higher_yes', 'schoolsup_no') with support: 0.5900383141762452
+('address_U', 'nursery_yes') with support: 0.5871647509578544
+('higher_yes', 'internet_yes', 'school_GP') with support: 0.5862068965517241
+('higher_yes', 'internet_yes', 'nursery_yes') with support: 0.5862068965517241
+('failures_0', 'Pstatus_T', 'nursery_yes') with support: 0.5852490421455939
+('address_U', 'Pstatus_T', 'higher_yes') with support: 0.5852490421455939
+('class_type_por', 'paid_no') with support: 0.5842911877394636
+('higher_yes', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.5823754789272031
+('romantic_no', 'Pstatus_T') with support: 0.5775862068965517
+('schoolsup_no', 'higher_yes', 'internet_yes', 'Pstatus_T') with support: 0.5775862068965517
+('Pstatus_T', 'famsize_GT3', 'schoolsup_no') with support: 0.5766283524904214
+('failures_0', 'famsize_GT3') with support: 0.5756704980842912
+('failures_0', 'paid_no', 'schoolsup_no') with support: 0.5756704980842912
+('guardian_mother', 'nursery_yes') with support: 0.5737547892720306
+('higher_yes', 'failures_0', 'Dalc_1') with support: 0.5737547892720306
+('higher_yes', 'Pstatus_T', 'Dalc_1') with support: 0.5737547892720306
+('higher_yes', 'famsup_yes') with support: 0.5727969348659003
+('higher_yes', 'guardian_mother', 'failures_0') with support: 0.5727969348659003
+('address_U', 'internet_yes', 'higher_yes') with support: 0.5708812260536399
+('higher_yes', 'failures_0', 'absences_-0.001_5.0') with support: 0.5699233716475096
+('address_U', 'school_GP', 'higher_yes') with support: 0.5689655172413793
+('higher_yes', 'guardian_mother', 'schoolsup_no') with support: 0.5689655172413793
+('higher_yes', 'schoolsup_no', 'Dalc_1') with support: 0.5689655172413793
+('Dalc_1', 'nursery_yes') with support: 0.5670498084291188
+('failures_0', 'higher_yes', 'internet_yes', 'Pstatus_T') with support: 0.5670498084291188
+('failures_0', 'schoolsup_no', 'higher_yes', 'internet_yes') with support: 0.5670498084291188
+('sex_F',) with support: 0.5660919540229885
+('schoolsup_no', 'nursery_yes', 'higher_yes', 'Pstatus_T') with support: 0.5660919540229885
+('address_U', 'paid_no') with support: 0.564176245210728
+('failures_0', 'paid_no', 'Pstatus_T') with support: 0.564176245210728
+('higher_yes', 'school_GP', 'nursery_yes') with support: 0.5632183908045977
+('higher_yes', 'paid_no', 'nursery_yes') with support: 0.5632183908045977
+('higher_yes', 'schoolsup_no', 'absences_-0.001_5.0') with support: 0.5632183908045977
+('internet_yes', 'Pstatus_T', 'nursery_yes') with support: 0.5622605363984674
+('higher_yes', 'famsize_GT3', 'schoolsup_no') with support: 0.5622605363984674
+('school_GP', 'Pstatus_T', 'schoolsup_no') with support: 0.5622605363984674
+('internet_yes', 'schoolsup_no', 'nursery_yes') with support: 0.5622605363984674
+('address_U', 'Pstatus_T', 'schoolsup_no') with support: 0.5613026819923371
+('paid_no', 'school_GP') with support: 0.5603448275862069
+('higher_yes', 'guardian_mother', 'Pstatus_T') with support: 0.5603448275862069
+('Fjob_other',) with support: 0.5593869731800766
+('higher_yes', 'traveltime_1') with support: 0.5593869731800766
+('Pstatus_T', 'schoolsup_no', 'absences_-0.001_5.0') with support: 0.5593869731800766
+('internet_yes', 'famsize_GT3') with support: 0.5584291187739464
+('paid_no', 'Dalc_1') with support: 0.5574712643678161
+('romantic_no', 'schoolsup_no') with support: 0.5574712643678161
+('paid_no', 'absences_-0.001_5.0') with support: 0.5565134099616859
+('class_type_por', 'schoolsup_no') with support: 0.5565134099616859
+('failures_0', 'schoolsup_no', 'nursery_yes', 'higher_yes') with support: 0.5565134099616859
+('class_type_por', 'higher_yes') with support: 0.5555555555555556
+('failures_0', 'nursery_yes', 'higher_yes', 'Pstatus_T') with support: 0.5545977011494253
+('paid_no', 'famsize_GT3') with support: 0.5526819923371648
+('failures_0', 'school_GP', 'Pstatus_T') with support: 0.5526819923371648
+('nursery_yes', 'absences_-0.001_5.0') with support: 0.5517241379310345
+('internet_yes', 'school_GP', 'Pstatus_T') with support: 0.5517241379310345
+('paid_no', 'schoolsup_no', 'nursery_yes') with support: 0.5517241379310345
+('higher_yes', 'address_U', 'nursery_yes') with support: 0.5488505747126436
+('higher_yes', 'internet_yes', 'paid_no') with support: 0.5488505747126436
+('internet_yes', 'guardian_mother') with support: 0.5478927203065134
+('romantic_no', 'failures_0') with support: 0.5478927203065134
+('higher_yes', 'failures_0', 'famsize_GT3') with support: 0.5478927203065134
+('schoolsup_no', 'higher_yes', 'paid_no', 'Pstatus_T') with support: 0.5478927203065134
+('famsize_GT3', 'nursery_yes') with support: 0.5469348659003831
+('internet_yes', 'Dalc_1') with support: 0.5459770114942529
+('class_type_por', 'Pstatus_T') with support: 0.5450191570881227
+('Pstatus_T', 'famsup_yes') with support: 0.5440613026819924
+('failures_0', 'school_GP', 'schoolsup_no') with support: 0.5440613026819924
+('guardian_mother', 'paid_no') with support: 0.5431034482758621
+('internet_yes', 'school_GP', 'schoolsup_no') with support: 0.5431034482758621
+('paid_no', 'Pstatus_T', 'nursery_yes') with support: 0.5421455938697318
+('guardian_mother', 'Pstatus_T', 'schoolsup_no') with support: 0.5421455938697318
+('internet_yes', 'absences_-0.001_5.0') with support: 0.5411877394636015
+('address_U', 'internet_yes', 'schoolsup_no') with support: 0.5411877394636015
+('address_U', 'internet_yes', 'Pstatus_T') with support: 0.5411877394636015
+('higher_yes', 'romantic_no', 'Pstatus_T') with support: 0.5411877394636015
+('internet_yes', 'paid_no', 'schoolsup_no') with support: 0.5402298850574713
+('address_U', 'failures_0', 'schoolsup_no') with support: 0.5402298850574713
+('internet_yes', 'failures_0', 'nursery_yes') with support: 0.539272030651341
+('Pstatus_T', 'schoolsup_no', 'Dalc_1') with support: 0.539272030651341
+('internet_yes', 'paid_no', 'Pstatus_T') with support: 0.539272030651341
+('failures_0', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.5383141762452107
+('failures_0', 'schoolsup_no', 'higher_yes', 'paid_no') with support: 0.5373563218390804
+('higher_yes', 'Dalc_1', 'nursery_yes') with support: 0.5354406130268199
+('higher_yes', 'guardian_mother', 'nursery_yes') with support: 0.5354406130268199
+('address_U', 'failures_0', 'Pstatus_T') with support: 0.5344827586206896
+('failures_0', 'school_GP', 'higher_yes', 'Pstatus_T') with support: 0.5344827586206896
+('failures_0', 'Pstatus_T', 'famsize_GT3') with support: 0.5335249042145593
+('internet_yes', 'failures_0', 'school_GP') with support: 0.5335249042145593
+('address_U', 'internet_yes', 'school_GP') with support: 0.5325670498084292
+('failures_0', 'higher_yes', 'paid_no', 'Pstatus_T') with support: 0.5316091954022989
+('failures_0', 'schoolsup_no', 'internet_yes', 'Pstatus_T') with support: 0.5306513409961686
+('school_GP', 'famsize_GT3') with support: 0.5296934865900383
+('schoolsup_no', 'famsup_yes') with support: 0.5296934865900383
+('guardian_mother', 'failures_0', 'schoolsup_no') with support: 0.5296934865900383
+('romantic_no', 'failures_0', 'higher_yes') with support: 0.5296934865900383
+('higher_yes', 'sex_F') with support: 0.5287356321839081
+('failures_0', 'schoolsup_no', 'Dalc_1') with support: 0.5277777777777778
+('address_U', 'school_GP', 'Pstatus_T') with support: 0.5268199233716475
+('class_type_por', 'failures_0') with support: 0.5258620689655172
+('guardian_mother', 'school_GP') with support: 0.5258620689655172
+('school_GP', 'Dalc_1') with support: 0.5258620689655172
+('failures_0', 'schoolsup_no', 'absences_-0.001_5.0') with support: 0.5258620689655172
+('class_type_por', 'paid_no', 'schoolsup_no') with support: 0.524904214559387
+('address_U', 'internet_yes', 'failures_0') with support: 0.524904214559387
+('failures_0', 'Pstatus_T', 'Dalc_1') with support: 0.5239463601532567
+('traveltime_1', 'Pstatus_T') with support: 0.5229885057471264
+('address_U', 'school_GP', 'schoolsup_no') with support: 0.5229885057471264
+('school_GP', 'schoolsup_no', 'higher_yes', 'Pstatus_T') with support: 0.5229885057471264
+('failures_0', 'school_GP', 'schoolsup_no', 'higher_yes') with support: 0.5229885057471264
+('address_U', 'Dalc_1') with support: 0.5220306513409961
+('failures_0', 'schoolsup_no', 'nursery_yes', 'Pstatus_T') with support: 0.5220306513409961
+('famsize_GT3', 'schoolsup_no', 'higher_yes', 'Pstatus_T') with support: 0.5220306513409961
+('internet_yes', 'famsize_GT3', 'Pstatus_T') with support: 0.5210727969348659
+('class_type_por', 'paid_no', 'higher_yes') with support: 0.5210727969348659
+('traveltime_1', 'schoolsup_no') with support: 0.5201149425287356
+('higher_yes', 'internet_yes', 'Dalc_1') with support: 0.5201149425287356
+('higher_yes', 'romantic_no', 'schoolsup_no') with support: 0.5191570881226054
+('school_GP', 'Pstatus_T', 'nursery_yes') with support: 0.5181992337164751
+('address_U', 'failures_0', 'school_GP') with support: 0.5181992337164751
+('schoolsup_no', 'nursery_yes', 'higher_yes', 'internet_yes') with support: 0.5181992337164751
+('failures_0', 'paid_no', 'nursery_yes') with support: 0.5172413793103449
+('school_GP', 'higher_yes', 'internet_yes', 'Pstatus_T') with support: 0.5172413793103449
+('failures_0', 'schoolsup_no', 'higher_yes', 'address_U') with support: 0.5172413793103449
+('nursery_yes', 'higher_yes', 'internet_yes', 'Pstatus_T') with support: 0.5172413793103449
+('G3_10.0_15.0',) with support: 0.5162835249042146
+('romantic_no', 'nursery_yes') with support: 0.5162835249042146
+('failures_0', 'higher_yes', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.5162835249042146
+('failures_0', 'nursery_yes', 'higher_yes', 'internet_yes') with support: 0.5162835249042146
+('higher_yes', 'schoolsup_no', 'address_U', 'Pstatus_T') with support: 0.5162835249042146
+('higher_yes', 'paid_no', 'school_GP') with support: 0.5153256704980843
+('failures_0', 'higher_yes', 'Pstatus_T', 'address_U') with support: 0.5153256704980843
+('failures_0', 'school_GP', 'higher_yes', 'internet_yes') with support: 0.5153256704980843
+('higher_yes', 'paid_no', 'Dalc_1') with support: 0.514367816091954
+('address_U', 'schoolsup_no', 'nursery_yes') with support: 0.514367816091954
+('guardian_mother', 'failures_0', 'Pstatus_T') with support: 0.514367816091954
+('famsize_GT3', 'Dalc_1') with support: 0.5134099616858238
+('higher_yes', 'internet_yes', 'famsize_GT3') with support: 0.5134099616858238
+('failures_0', 'school_GP', 'nursery_yes') with support: 0.5134099616858238
+('schoolsup_no', 'higher_yes', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.5134099616858238
+('failures_0', 'famsup_yes') with support: 0.5124521072796935
+('higher_yes', 'Fjob_other') with support: 0.5114942528735632
+('address_U', 'paid_no', 'higher_yes') with support: 0.5114942528735632
+('class_type_por', 'paid_no', 'Pstatus_T') with support: 0.5114942528735632
+('higher_yes', 'internet_yes', 'guardian_mother') with support: 0.5114942528735632
+('higher_yes', 'Pstatus_T', 'famsup_yes') with support: 0.5105363984674329
+('failures_0', 'traveltime_1') with support: 0.5095785440613027
+('higher_yes', 'nursery_yes', 'absences_-0.001_5.0') with support: 0.5095785440613027
+('G2_10.0_15.0',) with support: 0.5086206896551724
+('paid_no', 'famsize_GT3', 'Pstatus_T') with support: 0.5086206896551724
+('school_GP', 'schoolsup_no', 'nursery_yes') with support: 0.5086206896551724
+('internet_yes', 'school_GP', 'nursery_yes') with support: 0.5076628352490421
+('higher_yes', 'failures_0', 'address_U', 'internet_yes') with support: 0.5076628352490421
+('failures_0', 'famsize_GT3', 'higher_yes', 'Pstatus_T') with support: 0.5076628352490421
+('failures_0', 'schoolsup_no', 'paid_no', 'Pstatus_T') with support: 0.5067049808429118
+('school_GP', 'schoolsup_no', 'higher_yes', 'internet_yes') with support: 0.5067049808429118
+('failures_0', 'schoolsup_no', 'higher_yes', 'internet_yes', 'Pstatus_T') with support: 0.5067049808429118
+('activities_no',) with support: 0.5057471264367817
+('Pstatus_T', 'famsize_GT3', 'nursery_yes') with support: 0.5057471264367817
+('guardian_mother', 'schoolsup_no', 'nursery_yes') with support: 0.5057471264367817
+('higher_yes', 'internet_yes', 'absences_-0.001_5.0') with support: 0.5057471264367817
+('failures_0', 'higher_yes', 'Pstatus_T', 'Dalc_1') with support: 0.5057471264367817
+('schoolsup_no', 'higher_yes', 'Pstatus_T', 'Dalc_1') with support: 0.5057471264367817
+('romantic_no', 'paid_no') with support: 0.5047892720306514
+('Dalc_1', 'absences_-0.001_5.0') with support: 0.5047892720306514
+('higher_yes', 'paid_no', 'absences_-0.001_5.0') with support: 0.5047892720306514
+('address_U', 'failures_0', 'nursery_yes') with support: 0.5047892720306514
+('failures_0', 'famsize_GT3', 'schoolsup_no') with support: 0.5047892720306514
+('address_U', 'Pstatus_T', 'nursery_yes') with support: 0.5047892720306514
+('guardian_mother', 'failures_0', 'schoolsup_no', 'higher_yes') with support: 0.5047892720306514
+('guardian_mother', 'Dalc_1') with support: 0.5038314176245211
+('school_GP', 'traveltime_1') with support: 0.5038314176245211
+('internet_yes', 'failures_0', 'paid_no') with support: 0.5038314176245211
+('failures_0', 'schoolsup_no', 'higher_yes', 'Dalc_1') with support: 0.5038314176245211
+('higher_yes', 'failures_0', 'school_GP', 'address_U') with support: 0.5038314176245211
+('higher_yes', 'address_U', 'internet_yes', 'Pstatus_T') with support: 0.5038314176245211
+('address_U', 'guardian_mother') with support: 0.5028735632183908
+('address_U', 'traveltime_1') with support: 0.5028735632183908
+('address_U', 'famsize_GT3') with support: 0.5028735632183908
+('higher_yes', 'famsize_GT3', 'nursery_yes') with support: 0.5028735632183908
+('higher_yes', 'schoolsup_no', 'address_U', 'internet_yes') with support: 0.5028735632183908
+('internet_yes', 'famsup_yes') with support: 0.5019157088122606
+('higher_yes', 'school_GP', 'Dalc_1') with support: 0.5019157088122606
+('paid_no', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.5019157088122606
+('romantic_no', 'Pstatus_T', 'schoolsup_no') with support: 0.5019157088122606
+('higher_yes', 'school_GP', 'address_U', 'internet_yes') with support: 0.5019157088122606
+('internet_yes', 'traveltime_1') with support: 0.5009578544061303
+('internet_yes', 'romantic_no') with support: 0.5009578544061303
+('schoolsup_no', 'nursery_yes', 'internet_yes', 'Pstatus_T') with support: 0.5009578544061303
+('famsize_GT3', 'absences_-0.001_5.0') with support: 0.5
+('schoolsup_no', 'Fjob_other') with support: 0.5
+('address_U', 'absences_-0.001_5.0') with support: 0.5
+('failures_0', 'schoolsup_no', 'higher_yes', 'absences_-0.001_5.0') with support: 0.5
+('class_type_por', 'nursery_yes') with support: 0.4990421455938697
+('guardian_mother', 'failures_0', 'nursery_yes') with support: 0.4990421455938697
+('famsup_yes', 'nursery_yes') with support: 0.49808429118773945
+('class_type_por', 'failures_0', 'paid_no') with support: 0.49808429118773945
+('guardian_mother', 'schoolsup_no', 'higher_yes', 'Pstatus_T') with support: 0.49808429118773945
+('failures_0', 'school_GP', 'nursery_yes', 'higher_yes') with support: 0.49712643678160917
+('higher_yes', 'G3_10.0_15.0') with support: 0.49616858237547895
+('failures_0', 'Dalc_1', 'nursery_yes') with support: 0.49616858237547895
+('address_U', 'paid_no', 'schoolsup_no') with support: 0.4952107279693487
+('schoolsup_no', 'Dalc_1', 'nursery_yes') with support: 0.4952107279693487
+('higher_yes', 'guardian_mother', 'school_GP') with support: 0.4952107279693487
+('absences_-0.001_5.0', 'Pstatus_T', 'nursery_yes') with support: 0.4952107279693487
+('guardian_mother', 'failures_0', 'higher_yes', 'Pstatus_T') with support: 0.4952107279693487
+('schoolsup_no', 'nursery_yes', 'higher_yes', 'paid_no') with support: 0.4952107279693487
+('activities_yes',) with support: 0.4942528735632184
+('address_U', 'higher_yes', 'Dalc_1') with support: 0.4942528735632184
+('higher_yes', 'failures_0', 'traveltime_1') with support: 0.4942528735632184
+('internet_yes', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.4942528735632184
+('romantic_no', 'Pstatus_T', 'failures_0') with support: 0.4942528735632184
+('higher_yes', 'school_GP', 'famsize_GT3') with support: 0.4942528735632184
+('higher_yes', 'school_GP', 'address_U', 'Pstatus_T') with support: 0.4942528735632184
+('higher_yes', 'G2_10.0_15.0') with support: 0.4932950191570881
+('guardian_mother', 'Pstatus_T', 'nursery_yes') with support: 0.4932950191570881
+('higher_yes', 'paid_no', 'famsize_GT3') with support: 0.4932950191570881
+('internet_yes', 'famsize_GT3', 'schoolsup_no') with support: 0.4932950191570881
+('sex_F', 'Pstatus_T') with support: 0.49233716475095785
+('romantic_no', 'school_GP') with support: 0.49233716475095785
+('paid_no', 'schoolsup_no', 'Dalc_1') with support: 0.49233716475095785
+('higher_yes', 'schoolsup_no', 'famsup_yes') with support: 0.49233716475095785
+('class_type_por', 'higher_yes', 'schoolsup_no') with support: 0.49233716475095785
+('guardian_mother', 'paid_no', 'schoolsup_no') with support: 0.49137931034482757
+('Pstatus_T', 'Dalc_1', 'nursery_yes') with support: 0.49137931034482757
+('higher_yes', 'guardian_mother', 'paid_no') with support: 0.49137931034482757
+('higher_yes', 'failures_0', 'famsup_yes') with support: 0.49137931034482757
+('class_type_por', 'failures_0', 'higher_yes') with support: 0.49137931034482757
+('failures_0', 'schoolsup_no', 'nursery_yes', 'higher_yes', 'Pstatus_T') with support: 0.49137931034482757
+('G1_10.0_15.0',) with support: 0.4904214559386973
+('famrel_4',) with support: 0.4904214559386973
+('address_U', 'internet_yes', 'nursery_yes') with support: 0.4904214559386973
+('paid_no', 'schoolsup_no', 'absences_-0.001_5.0') with support: 0.4904214559386973
+('higher_yes', 'school_GP', 'schoolsup_no', 'address_U') with support: 0.48946360153256707
+('guardian_mother', 'famsize_GT3') with support: 0.4885057471264368
+('internet_yes', 'guardian_mother', 'schoolsup_no') with support: 0.4885057471264368
+('higher_yes', 'class_type_por', 'Pstatus_T') with support: 0.4885057471264368
+('higher_yes', 'romantic_no', 'nursery_yes') with support: 0.4885057471264368
+('higher_yes', 'traveltime_1', 'Pstatus_T') with support: 0.4885057471264368
+('class_type_por', 'Pstatus_T', 'schoolsup_no') with support: 0.4885057471264368
+('paid_no', 'school_GP', 'Pstatus_T') with support: 0.4885057471264368
+('school_GP', 'nursery_yes', 'higher_yes', 'Pstatus_T') with support: 0.4885057471264368
+('nursery_yes', 'higher_yes', 'paid_no', 'Pstatus_T') with support: 0.4875478927203065
+('Pstatus_T', 'Fjob_other') with support: 0.48659003831417624
+('school_GP', 'Pstatus_T', 'famsize_GT3') with support: 0.48659003831417624
+('higher_yes', 'internet_yes', 'paid_no', 'Pstatus_T') with support: 0.48659003831417624
+('address_U', 'school_GP', 'nursery_yes') with support: 0.48563218390804597
+('paid_no', 'famsize_GT3', 'schoolsup_no') with support: 0.48563218390804597
+('schoolsup_no', 'higher_yes', 'internet_yes', 'paid_no') with support: 0.48563218390804597
+('failures_0', 'nursery_yes', 'higher_yes', 'paid_no') with support: 0.48563218390804597
+('school_GP', 'absences_-0.001_5.0') with support: 0.4846743295019157
+('failures_0', 'nursery_yes', 'higher_yes', 'address_U') with support: 0.4846743295019157
+('paid_no', 'school_GP', 'schoolsup_no') with support: 0.4837164750957854
+('internet_yes', 'schoolsup_no', 'Dalc_1') with support: 0.4837164750957854
+('nursery_yes', 'schoolsup_no', 'absences_-0.001_5.0') with support: 0.4837164750957854
+('higher_yes', 'traveltime_1', 'schoolsup_no') with support: 0.4837164750957854
+('internet_yes', 'Pstatus_T', 'Dalc_1') with support: 0.4837164750957854
+('address_U', 'paid_no', 'Pstatus_T') with support: 0.4837164750957854
+('sex_F', 'schoolsup_no') with support: 0.4827586206896552
+('failures_0', 'schoolsup_no', 'nursery_yes', 'internet_yes') with support: 0.4827586206896552
+('schoolsup_no', 'nursery_yes', 'paid_no', 'Pstatus_T') with support: 0.4827586206896552
+('failures_0', 'school_GP', 'schoolsup_no', 'Pstatus_T') with support: 0.4827586206896552
+('studytime_2',) with support: 0.4818007662835249
+('traveltime_1', 'nursery_yes') with support: 0.4818007662835249
+('paid_no', 'Pstatus_T', 'Dalc_1') with support: 0.4818007662835249
+('failures_0', 'G3_10.0_15.0') with support: 0.48084291187739464
+('higher_yes', 'famsize_GT3', 'Dalc_1') with support: 0.48084291187739464
+('higher_yes', 'school_GP', 'traveltime_1') with support: 0.48084291187739464
+('schoolsup_no', 'address_U', 'internet_yes', 'Pstatus_T') with support: 0.48084291187739464
+('guardian_mother', 'absences_-0.001_5.0') with support: 0.47988505747126436
+('school_GP', 'schoolsup_no', 'nursery_yes', 'higher_yes') with support: 0.47988505747126436
+('internet_yes', 'guardian_mother', 'Pstatus_T') with support: 0.4789272030651341
+('failures_0', 'nursery_yes', 'absences_-0.001_5.0') with support: 0.4789272030651341
+('failures_0', 'schoolsup_no', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.4789272030651341
+('school_GP', 'nursery_yes', 'higher_yes', 'internet_yes') with support: 0.4789272030651341
+('romantic_no', 'failures_0', 'higher_yes', 'Pstatus_T') with support: 0.4789272030651341
+('guardian_mother', 'failures_0', 'nursery_yes', 'higher_yes') with support: 0.4789272030651341
+('schoolsup_no', 'internet_yes', 'paid_no', 'Pstatus_T') with support: 0.4789272030651341
+('failures_0', 'higher_yes', 'internet_yes', 'paid_no') with support: 0.4789272030651341
+('internet_yes', 'failures_0', 'guardian_mother') with support: 0.4779693486590038
+('internet_yes', 'failures_0', 'Dalc_1') with support: 0.4779693486590038
+('famsize_GT3', 'schoolsup_no', 'nursery_yes') with support: 0.4779693486590038
+('internet_yes', 'paid_no', 'nursery_yes') with support: 0.4779693486590038
+('famsize_GT3', 'higher_yes', 'internet_yes', 'Pstatus_T') with support: 0.4779693486590038
+('schoolsup_no', 'nursery_yes', 'higher_yes', 'address_U') with support: 0.4779693486590038
+('school_GP', 'schoolsup_no', 'internet_yes', 'Pstatus_T') with support: 0.4779693486590038
+('class_type_por', 'internet_yes') with support: 0.47701149425287354
+('higher_yes', 'G1_10.0_15.0') with support: 0.47701149425287354
+('higher_yes', 'Dalc_1', 'absences_-0.001_5.0') with support: 0.47701149425287354
+('failures_0', 'famsize_GT3', 'schoolsup_no', 'higher_yes') with support: 0.47701149425287354
+('failures_0', 'nursery_yes', 'higher_yes', 'Dalc_1') with support: 0.47701149425287354
+('sex_F', 'failures_0') with support: 0.4760536398467433
+('internet_yes', 'schoolsup_no', 'absences_-0.001_5.0') with support: 0.4760536398467433
+('failures_0', 'nursery_yes', 'internet_yes', 'Pstatus_T') with support: 0.4760536398467433
+('failures_0', 'schoolsup_no', 'address_U', 'Pstatus_T') with support: 0.4760536398467433
+('romantic_no', 'failures_0', 'schoolsup_no') with support: 0.47509578544061304
+('higher_yes', 'internet_yes', 'romantic_no') with support: 0.47413793103448276
+('higher_yes', 'internet_yes', 'famsup_yes') with support: 0.47413793103448276
+('address_U', 'failures_0', 'paid_no') with support: 0.47413793103448276
+('failures_0', 'schoolsup_no', 'higher_yes', 'paid_no', 'Pstatus_T') with support: 0.47413793103448276
+('failures_0', 'G2_10.0_15.0') with support: 0.4731800766283525
+('address_U', 'romantic_no') with support: 0.4731800766283525
+('school_GP', 'famsup_yes') with support: 0.4722222222222222
+('higher_yes', 'guardian_mother', 'Dalc_1') with support: 0.4722222222222222
+('paid_no', 'failures_0', 'Dalc_1') with support: 0.4722222222222222
+('internet_yes', 'failures_0', 'absences_-0.001_5.0') with support: 0.4722222222222222
+('failures_0', 'school_GP', 'paid_no') with support: 0.4722222222222222
+('failures_0', 'famsize_GT3', 'schoolsup_no', 'Pstatus_T') with support: 0.47126436781609193
+('famsize_GT3', 'Pstatus_T', 'Dalc_1') with support: 0.4703065134099617
+('class_type_por', 'failures_0', 'schoolsup_no') with support: 0.4703065134099617
+('famsize_GT3', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.4703065134099617
+('higher_yes', 'address_U', 'absences_-0.001_5.0') with support: 0.4703065134099617
+('nursery_yes', 'higher_yes', 'Pstatus_T', 'address_U') with support: 0.4703065134099617
+('Pstatus_T', 'schoolsup_no', 'famsup_yes') with support: 0.46934865900383144
+('higher_yes', 'internet_yes', 'traveltime_1') with support: 0.46934865900383144
+('address_U', 'traveltime_1', 'higher_yes') with support: 0.46934865900383144
+('address_U', 'guardian_mother', 'higher_yes') with support: 0.46934865900383144
+('guardian_mother', 'schoolsup_no', 'nursery_yes', 'higher_yes') with support: 0.46934865900383144
+('failures_0', 'school_GP', 'schoolsup_no', 'internet_yes') with support: 0.46934865900383144
+('failures_0', 'school_GP', 'internet_yes', 'Pstatus_T') with support: 0.46934865900383144
+('school_GP', 'address_U', 'internet_yes', 'Pstatus_T') with support: 0.46934865900383144
+('failures_0', 'schoolsup_no', 'Pstatus_T', 'Dalc_1') with support: 0.46934865900383144
+('guardian_mother', 'paid_no', 'Pstatus_T') with support: 0.46839080459770116
+('romantic_no', 'schoolsup_no', 'higher_yes', 'Pstatus_T') with support: 0.46839080459770116
+('higher_yes', 'romantic_no', 'school_GP') with support: 0.4674329501915709
+('paid_no', 'failures_0', 'absences_-0.001_5.0') with support: 0.4674329501915709
+('class_type_por', 'paid_no', 'nursery_yes') with support: 0.4674329501915709
+('failures_0', 'schoolsup_no', 'address_U', 'internet_yes') with support: 0.4674329501915709
+('higher_yes', 'famsup_yes', 'nursery_yes') with support: 0.4664750957854406
+('school_GP', 'schoolsup_no', 'address_U', 'internet_yes') with support: 0.4664750957854406
+('higher_yes', 'sex_F', 'Pstatus_T') with support: 0.46551724137931033
+('higher_yes', 'failures_0', 'G3_10.0_15.0') with support: 0.46551724137931033
+('schoolsup_no', 'nursery_yes', 'higher_yes', 'Dalc_1') with support: 0.46551724137931033
+('class_type_por', 'failures_0', 'higher_yes', 'paid_no') with support: 0.46551724137931033
+('romantic_no', 'absences_-0.001_5.0') with support: 0.46455938697318006
+('higher_yes', 'romantic_no', 'paid_no') with support: 0.46455938697318006
+('failures_0', 'address_U', 'internet_yes', 'Pstatus_T') with support: 0.46455938697318006
+('failures_0', 'schoolsup_no', 'higher_yes', 'school_GP', 'Pstatus_T') with support: 0.46455938697318006
+('guardian_mother', 'failures_0', 'school_GP') with support: 0.46360153256704983
+('higher_yes', 'famsize_GT3', 'absences_-0.001_5.0') with support: 0.46360153256704983
+('failures_0', 'school_GP', 'Dalc_1') with support: 0.46360153256704983
+('class_type_por', 'schoolsup_no', 'higher_yes', 'paid_no') with support: 0.46360153256704983
+('nursery_yes', 'higher_yes', 'Pstatus_T', 'Dalc_1') with support: 0.46360153256704983
+('failures_0', 'higher_yes', 'internet_yes', 'Dalc_1') with support: 0.46360153256704983
+('guardian_mother', 'failures_0', 'higher_yes', 'internet_yes') with support: 0.46360153256704983
+('failures_0', 'Fjob_other') with support: 0.46264367816091956
+('higher_yes', 'famsize_GT3', 'address_U') with support: 0.46264367816091956
+('higher_yes', 'failures_0', 'G2_10.0_15.0') with support: 0.46264367816091956
+('address_U', 'failures_0', 'Dalc_1') with support: 0.46264367816091956
+('famsize_GT3', 'nursery_yes', 'higher_yes', 'Pstatus_T') with support: 0.46264367816091956
+('school_GP', 'nursery_yes', 'higher_yes', 'address_U') with support: 0.46264367816091956
+('internet_yes', 'paid_no', 'school_GP') with support: 0.4616858237547893
+('higher_yes', 'internet_yes', 'Pstatus_T', 'Dalc_1') with support: 0.4616858237547893
+('higher_yes', 'activities_yes') with support: 0.460727969348659
+('paid_no', 'traveltime_1') with support: 0.460727969348659
+('school_GP', 'Pstatus_T', 'Dalc_1') with support: 0.460727969348659
+('address_U', 'Pstatus_T', 'famsize_GT3') with support: 0.460727969348659
+('internet_yes', 'failures_0', 'famsize_GT3') with support: 0.460727969348659
+('class_type_por', 'failures_0', 'Pstatus_T') with support: 0.460727969348659
+('higher_yes', 'school_GP', 'absences_-0.001_5.0') with support: 0.460727969348659
+('failures_0', 'schoolsup_no', 'nursery_yes', 'paid_no') with support: 0.460727969348659
+('address_U', 'schoolsup_no', 'Dalc_1') with support: 0.45977011494252873
+('failures_0', 'school_GP', 'address_U', 'internet_yes') with support: 0.45977011494252873
+('school_GP', 'schoolsup_no', 'address_U', 'Pstatus_T') with support: 0.45977011494252873
+('higher_yes', 'internet_yes', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.45977011494252873
+('schoolsup_no', 'higher_yes', 'internet_yes', 'Dalc_1') with support: 0.45977011494252873
+('guardian_mother', 'failures_0', 'schoolsup_no', 'Pstatus_T') with support: 0.45977011494252873
+('higher_yes', 'nursery_yes', 'address_U', 'internet_yes') with support: 0.45977011494252873
+('failures_0', 'schoolsup_no', 'nursery_yes', 'higher_yes', 'internet_yes') with support: 0.45977011494252873
+('G3_10.0_15.0', 'schoolsup_no') with support: 0.45881226053639845
+('sex_F', 'nursery_yes') with support: 0.45881226053639845
+('address_U', 'internet_yes', 'paid_no') with support: 0.45881226053639845
+('class_type_por', 'schoolsup_no', 'paid_no', 'Pstatus_T') with support: 0.45881226053639845
+('famsize_GT3', 'schoolsup_no', 'internet_yes', 'Pstatus_T') with support: 0.45881226053639845
+('schoolsup_no', 'nursery_yes', 'higher_yes', 'internet_yes', 'Pstatus_T') with support: 0.45881226053639845
+('class_type_por', 'absences_-0.001_5.0') with support: 0.4578544061302682
+('failures_0', 'G1_10.0_15.0') with support: 0.4578544061302682
+('schoolsup_no', 'traveltime_1', 'Pstatus_T') with support: 0.4578544061302682
+('guardian_mother', 'failures_0', 'paid_no') with support: 0.4578544061302682
+('guardian_mother', 'nursery_yes', 'higher_yes', 'Pstatus_T') with support: 0.4578544061302682
+('failures_0', 'higher_yes', 'internet_yes', 'absences_-0.001_5.0') with support: 0.4578544061302682
+('G2_10.0_15.0', 'schoolsup_no') with support: 0.45689655172413796
+('nursery_yes', 'higher_yes', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.45689655172413796
+('failures_0', 'romantic_no', 'schoolsup_no', 'higher_yes') with support: 0.45689655172413796
+('class_type_por', 'higher_yes', 'paid_no', 'Pstatus_T') with support: 0.45689655172413796
+('failures_0', 'schoolsup_no', 'higher_yes', 'absences_-0.001_5.0', 'Pstatus_T') with support: 0.45689655172413796
+('failures_0', 'schoolsup_no', 'higher_yes', 'address_U', 'Pstatus_T') with support: 0.45689655172413796
+('higher_yes', 'studytime_2') with support: 0.4559386973180077
+('guardian_mother', 'school_GP', 'Pstatus_T') with support: 0.4559386973180077
+('failures_0', 'Pstatus_T', 'famsup_yes') with support: 0.4559386973180077
+('failures_0', 'nursery_yes', 'higher_yes', 'absences_-0.001_5.0') with support: 0.4559386973180077
+('guardian_mother', 'romantic_no') with support: 0.4549808429118774
+('internet_yes', 'romantic_no', 'Pstatus_T') with support: 0.4549808429118774
+('higher_yes', 'guardian_mother', 'famsize_GT3') with support: 0.4549808429118774
+('address_U', 'paid_no', 'school_GP') with support: 0.4549808429118774
+('failures_0', 'school_GP', 'famsize_GT3') with support: 0.4549808429118774
+('romantic_no', 'famsize_GT3') with support: 0.4540229885057471
+('higher_yes', 'activities_no') with support: 0.4540229885057471
+('higher_yes', 'Fjob_other', 'schoolsup_no') with support: 0.4540229885057471
+('guardian_mother', 'school_GP', 'schoolsup_no') with support: 0.4540229885057471
+('higher_yes', 'traveltime_1', 'nursery_yes') with support: 0.4540229885057471
+('higher_yes', 'sex_F', 'failures_0') with support: 0.4540229885057471
+('internet_yes', 'guardian_mother', 'nursery_yes') with support: 0.4540229885057471
+('guardian_mother', 'schoolsup_no', 'higher_yes', 'internet_yes') with support: 0.4540229885057471
+('higher_yes', 'paid_no', 'Pstatus_T', 'absences_-0.001_5.0') with support: 0.4540229885057471
+('failures_0', 'schoolsup_no', 'internet_yes', 'paid_no') with support: 0.4540229885057471
+('failures_0', 'higher_yes', 'internet_yes', 'school_GP', 'Pstatus_T') with support: 0.4540229885057471
+('failures_0', 'nursery_yes', 'higher_yes', 'internet_yes', 'Pstatus_T') with support: 0.4540229885057471
+('G3_10.0_15.0', 'Pstatus_T') with support: 0.45306513409961685
+('Pstatus_T', 'activities_yes') with support: 0.45306513409961685
+('Pstatus_T', 'Dalc_1', 'absences_-0.001_5.0') with support: 0.45306513409961685
+('school_GP', 'famsize_GT3', 'higher_yes', 'Pstatus_T') with support: 0.45306513409961685
+('sex_F', 'Dalc_1') with support: 0.4521072796934866
+('higher_yes', 'famrel_4') with support: 0.4521072796934866
+('higher_yes', 'school_GP', 'famsup_yes') with support: 0.4521072796934866
+('guardian_mother', 'famsize_GT3', 'Pstatus_T') with support: 0.4521072796934866
+('school_GP', 'famsize_GT3', 'schoolsup_no') with support: 0.4521072796934866
+('paid_no', 'Dalc_1', 'nursery_yes') with support: 0.4521072796934866
+('failures_0', 'school_GP', 'higher_yes', 'paid_no') with support: 0.4521072796934866
+('famsize_GT3', 'higher_yes', 'paid_no', 'Pstatus_T') with support: 0.4521072796934866
+('failures_0', 'school_GP', 'address_U', 'Pstatus_T') with support: 0.4521072796934866
+('romantic_no', 'Dalc_1') with support: 0.4511494252873563
+('G3_10.0_15.0', 'G2_10.0_15.0') with support: 0.4511494252873563
+('romantic_no', 'paid_no', 'Pstatus_T') with support: 0.4511494252873563
+('higher_yes', 'failures_0', 'address_U', 'paid_no') with support: 0.4511494252873563
+('famsize_GT3', 'schoolsup_no', 'higher_yes', 'internet_yes') with support: 0.4511494252873563
+('failures_0', 'school_GP', 'higher_yes', 'Dalc_1') with support: 0.4511494252873563
+('schoolsup_no', 'higher_yes', 'paid_no', 'Dalc_1') with support: 0.4511494252873563
+('guardian_mother', 'failures_0', 'school_GP', 'higher_yes') with support: 0.4511494252873563
+('failures_0', 'schoolsup_no', 'higher_yes', 'internet_yes', 'school_GP') with support: 0.4511494252873563
+('failures_0', 'schoolsup_no', 'higher_yes', 'Pstatus_T', 'Dalc_1') with support: 0.4511494252873563
+('paid_no', 'famsup_yes') with support: 0.4501915708812261
+('failures_0', 'famsize_GT3', 'nursery_yes') with support: 0.4501915708812261
+('address_U', 'paid_no', 'nursery_yes') with support: 0.4501915708812261
+('romantic_no', 'Pstatus_T', 'nursery_yes') with support: 0.4501915708812261
+('failures_0', 'higher_yes', 'Dalc_1', 'address_U') with support: 0.4501915708812261
+('failures_0', 'schoolsup_no', 'higher_yes', 'internet_yes', 'address_U') with support: 0.4501915708812261

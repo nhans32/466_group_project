@@ -67,10 +67,11 @@ def pruneAndOutputDF(df, output_file):
         # iterate over rows of dataframe
         for index, row in df.iterrows():
             # if a column has a value of 1 then write that column name to the output file
-            for col in row.index:
+            for idx, col in enumerate(row.index):
                 if row[col] == 1:
-                    f.write(col + ',')
-            f.write('\n')
+                    f.write(f'{col},')
+                if idx == len(row.index) - 1:
+                    f.write('\n')
         f.close()
 
 # further hot encoding for the alcohol dataset
@@ -100,26 +101,31 @@ def outputItemsRules(items, rules, min_supp, min_conf):
         f.close()
 
 if __name__ == '__main__':
-    MIN_SUPP = 0.4
-    MIN_CONF = 0.8
+    MIN_SUPP = 0.45
+    MIN_CONF = 0.85
 
     # TODO: Run analysis for datasets individually and see if there is a difference in the results
 
-    # open hot-encodded into a dataframe
-    df_combined = pd.read_pickle('data/alcohol_dataset.pkl')
-
+    # # open hot-encodded into a dataframe
+    # df_combined = pd.read_pickle('data/alcohol_dataset.pkl')
+    df_mat = pd.read_csv('data/student-mat.csv')
+    df_mat['class_type'] = 'mat'
+    df_por = pd.read_csv('data/student-por.csv')
+    df_por['class_type'] = 'por'
+    df_combined = pd.concat([df_mat, df_por], axis=0)
     # reset index of combined dataframe, if don't do this - will run out of memory FASSSTTT
     df_combined = df_combined.reset_index(drop=True)
 
     # one hot encoding for the rest of the rows
-    df_combined = oneHotEncode(df_combined, ['age', 'failures', 'school', 'sex', 'address', 'famsize', 'Pstatus', 'schoolsup', 'famsup', 'paid', 'activities',
-                                            'nursery', 'higher', 'internet', 'romantic', 'class_type'])
-    # discretizing the continous variables
+    df_combined = oneHotEncode(df_combined, ['school', 'sex', 'age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu', 'Mjob', 'Fjob', 'reason', 'guardian',
+                                             'traveltime', 'studytime', 'failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet',
+                                             'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'class_type'])
+    # discretizing the continous variables and final hot encoding of these variables
     df_combined = createBins(df_combined)
 
     pruneAndOutputDF(df_combined, 'data/alcohol_dataset_apriori.csv')
     # output csv file named data/test.csv
-    df_combined.to_csv('data/test.csv', index=False)
+    df_combined.to_csv('data/hot_encoded_alcohol_dataset.csv', index=False)
 
     inFile = dataFromFile('data/alcohol_dataset_apriori.csv')
     items, rules = runApriori(inFile, MIN_SUPP, MIN_CONF)
