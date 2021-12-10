@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 import pandas as pd
 import numpy as np
 
@@ -99,7 +100,11 @@ def calcRuleStats(rule_arr, att_to_category, DATASET):
 
     # figsize=(10, 10)
     fig, ax = plt.subplots()
-    im = ax.imshow(df_from.to_numpy())
+    data = df_from.to_numpy()
+    data = np.ma.masked_where(data == 0, data)
+    cmap = mpl.cm.get_cmap("Oranges").copy()
+    cmap.set_bad(color='white')
+    im = ax.imshow(data, cmap=cmap)
     ax.set_xticks(np.arange(len(unique_categories.keys())), labels=unique_categories.keys())
     ax.set_yticks(np.arange(len(unique_categories.keys())), labels=unique_categories.keys())
 
@@ -118,6 +123,8 @@ def calcRuleStats(rule_arr, att_to_category, DATASET):
     ax.set_ylabel('From Attribute Type')
     # set x label as to rule
     ax.set_xlabel('To Attribute Type')
+    # make cells with 0 transparent
+
     plt.show()
 
 def combinedSepAnalysis(MIN_SUPP, MIN_CONF, PRUNE, attr_to_cat):
@@ -149,7 +156,7 @@ def combinedSepAnalysis(MIN_SUPP, MIN_CONF, PRUNE, attr_to_cat):
 if __name__ == '__main__':
     MIN_SUPP = 0.45
     MIN_CONF = 0.8
-    DATASET = 'combined'
+    DATASET = 'por'
     PRUNE = True
     ANALYZE_COMBINED = True
 
