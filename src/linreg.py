@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.base import BaseEstimator
 import pandas as pd
+from sklearn.metrics import r2_score
 
 class LinearRegressor(BaseEstimator):
     """LinearRegressor model."""
@@ -62,7 +63,7 @@ class LinearRegressor(BaseEstimator):
         return self.alpha + X @ self.betas
 
     def score(self, X: pd.DataFrame, y: pd.Series) -> float:
-        """Accuracy measurement for the Linear Regression model.
+        """R^2 measurement for the Linear Regression model.
 
         Args:
             X: explanatory variables
@@ -72,4 +73,5 @@ class LinearRegressor(BaseEstimator):
             float: the accuracy of the model (# correct / # total)
         """
         y_pred = self.alpha + X @ self.betas
-        return np.sqrt(np.square(y - y_pred).sum() / X.shape[0])
+        # return np.sqrt(np.square(y - y_pred).sum() / X.shape[0])
+        return r2_score(y, y_pred)
