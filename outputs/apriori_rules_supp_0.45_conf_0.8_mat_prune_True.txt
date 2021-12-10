@@ -1,0 +1,79 @@
+('address_U', 'traveltime_1') ====> ('internet_yes',) with confidence: 0.8918918918918919
+('traveltime_1', 'internet_yes') ====> ('address_U',) with confidence: 0.8918918918918919
+('failures_0', 'address_U') ====> ('internet_yes',) with confidence: 0.891566265060241
+('failures_0', 'address_U', 'nursery_yes') ====> ('internet_yes',) with confidence: 0.8840579710144928
+('address_U', 'guardian_mother') ====> ('internet_yes',) with confidence: 0.883495145631068
+('failures_0', 'traveltime_1') ====> ('address_U',) with confidence: 0.8803827751196172
+('famsize_GT3', 'address_U') ====> ('internet_yes',) with confidence: 0.8779342723004695
+('address_U',) ====> ('internet_yes',) with confidence: 0.8762214983713354
+('failures_0', 'traveltime_1') ====> ('internet_yes',) with confidence: 0.8755980861244019
+('address_U', 'Dalc_1') ====> ('internet_yes',) with confidence: 0.874439461883408
+('address_U', 'nursery_yes') ====> ('internet_yes',) with confidence: 0.8709677419354839
+('address_U', 'Dalc_1') ====> ('failures_0',) with confidence: 0.8699551569506726
+('traveltime_1', 'nursery_yes') ====> ('address_U',) with confidence: 0.8695652173913043
+('Dalc_1', 'nursery_yes') ====> ('failures_0',) with confidence: 0.8648648648648648
+('traveltime_1', 'nursery_yes') ====> ('internet_yes',) with confidence: 0.8647342995169082
+('traveltime_1',) ====> ('internet_yes',) with confidence: 0.8638132295719844
+('traveltime_1',) ====> ('address_U',) with confidence: 0.8638132295719844
+('famsup_yes',) ====> ('internet_yes',) with confidence: 0.8636363636363636
+('guardian_mother', 'nursery_yes') ====> ('failures_0',) with confidence: 0.8577777777777778
+('Dalc_1', 'internet_yes') ====> ('failures_0',) with confidence: 0.855263157894737
+('Dalc_1', 'internet_yes') ====> ('address_U',) with confidence: 0.855263157894737
+('guardian_mother', 'internet_yes') ====> ('failures_0',) with confidence: 0.8539823008849556
+('failures_0', 'internet_yes', 'nursery_yes') ====> ('address_U',) with confidence: 0.8511627906976744
+('failures_0',) ====> ('internet_yes',) with confidence: 0.8493589743589745
+('address_U', 'internet_yes', 'nursery_yes') ====> ('failures_0',) with confidence: 0.8472222222222222
+('failures_0', 'nursery_yes') ====> ('internet_yes',) with confidence: 0.8464566929133859
+('guardian_mother',) ====> ('failures_0',) with confidence: 0.8424908424908425
+('Dalc_1',) ====> ('failures_0',) with confidence: 0.8405797101449276
+('failures_0', 'Dalc_1') ====> ('internet_yes',) with confidence: 0.8405172413793104
+('failures_0', 'guardian_mother') ====> ('internet_yes',) with confidence: 0.8391304347826087
+('failures_0', 'guardian_mother') ====> ('nursery_yes',) with confidence: 0.8391304347826087
+('failures_0', 'internet_yes') ====> ('address_U',) with confidence: 0.8377358490566037
+('failures_0', 'Dalc_1') ====> ('address_U',) with confidence: 0.8362068965517241
+('romantic_no', 'internet_yes') ====> ('failures_0',) with confidence: 0.835680751173709
+('guardian_mother', 'nursery_yes') ====> ('internet_yes',) with confidence: 0.8355555555555555
+('address_U', 'nursery_yes') ====> ('failures_0',) with confidence: 0.8346774193548387
+('nursery_yes',) ====> ('internet_yes',) with confidence: 0.8343949044585987
+('famsize_GT3', 'failures_0') ====> ('internet_yes',) with confidence: 0.8333333333333334
+('famsize_GT3', 'nursery_yes') ====> ('internet_yes',) with confidence: 0.8333333333333333
+('famsize_GT3',) ====> ('internet_yes',) with confidence: 0.8327402135231318
+('guardian_mother', 'internet_yes') ====> ('nursery_yes',) with confidence: 0.8318584070796459
+('absences_-0.001_5.0',) ====> ('failures_0',) with confidence: 0.8313253012048193
+('failures_0', 'address_U') ====> ('nursery_yes',) with confidence: 0.8313253012048193
+('Dalc_1', 'nursery_yes') ====> ('internet_yes',) with confidence: 0.8288288288288288
+('address_U', 'traveltime_1') ====> ('failures_0',) with confidence: 0.8288288288288288
+('guardian_mother',) ====> ('internet_yes',) with confidence: 0.8278388278388279
+('failures_0', 'Dalc_1') ====> ('nursery_yes',) with confidence: 0.8275862068965517
+('Dalc_1',) ====> ('internet_yes',) with confidence: 0.8260869565217391
+('address_U', 'internet_yes') ====> ('failures_0',) with confidence: 0.8252788104089219
+('internet_yes', 'nursery_yes') ====> ('address_U',) with confidence: 0.8244274809160306
+('traveltime_1', 'internet_yes') ====> ('failures_0',) with confidence: 0.8243243243243243
+('failures_0', 'address_U', 'internet_yes') ====> ('nursery_yes',) with confidence: 0.8243243243243243
+('guardian_mother',) ====> ('nursery_yes',) with confidence: 0.8241758241758242
+('failures_0', 'romantic_no') ====> ('internet_yes',) with confidence: 0.8240740740740741
+('romantic_no',) ====> ('failures_0',) with confidence: 0.8212927756653993
+('internet_yes', 'nursery_yes') ====> ('failures_0',) with confidence: 0.8206106870229009
+('internet_yes',) ====> ('address_U',) with confidence: 0.817629179331307
+('absences_-0.001_5.0',) ====> ('internet_yes',) with confidence: 0.8152610441767068
+('failures_0', 'nursery_yes') ====> ('address_U',) with confidence: 0.8149606299212598
+('failures_0',) ====> ('nursery_yes',) with confidence: 0.8141025641025641
+('famsup_yes',) ====> ('nursery_yes',) with confidence: 0.8140495867768595
+('famsup_yes',) ====> ('failures_0',) with confidence: 0.8140495867768595
+('traveltime_1',) ====> ('failures_0',) with confidence: 0.8132295719844358
+('failures_0', 'internet_yes') ====> ('nursery_yes',) with confidence: 0.8113207547169812
+('address_U',) ====> ('failures_0',) with confidence: 0.8110749185667753
+('address_U', 'traveltime_1') ====> ('nursery_yes',) with confidence: 0.8108108108108107
+('Dalc_1', 'nursery_yes') ====> ('address_U',) with confidence: 0.8108108108108107
+('romantic_no',) ====> ('internet_yes',) with confidence: 0.8098859315589354
+('nursery_yes',) ====> ('failures_0',) with confidence: 0.8089171974522292
+('Dalc_1',) ====> ('address_U',) with confidence: 0.8079710144927537
+('address_U',) ====> ('nursery_yes',) with confidence: 0.8078175895765473
+('address_U', 'Dalc_1') ====> ('nursery_yes',) with confidence: 0.8071748878923767
+('Dalc_1', 'internet_yes') ====> ('nursery_yes',) with confidence: 0.8070175438596492
+('traveltime_1', 'internet_yes') ====> ('nursery_yes',) with confidence: 0.8063063063063063
+('internet_yes',) ====> ('failures_0',) with confidence: 0.8054711246200609
+('traveltime_1',) ====> ('nursery_yes',) with confidence: 0.8054474708171206
+('guardian_mother', 'internet_yes') ====> ('address_U',) with confidence: 0.8053097345132743
+('Dalc_1',) ====> ('nursery_yes',) with confidence: 0.8043478260869565
+('address_U', 'internet_yes') ====> ('nursery_yes',) with confidence: 0.8029739776951673

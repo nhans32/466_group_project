@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
 
 def getBasicRuleStats(rules_fp):
     rule_arr = []
@@ -51,7 +53,7 @@ def getBasicItemStats(items_fp):
             item_arr.append({'set': item_set, 'support': supp})
     return item_arr, item_greater_than_1, item_less_than_2
 
-def calcRuleStats(rule_arr, from_greater_than_1, to_greater_than_1, both_greater_than_1, both_less_than_2, att_to_category):
+def calcRuleStats(rule_arr, att_to_category, DATASET):
     # print(rule_arr)
     new_rules_general = {}
     for rule in rule_arr:
@@ -64,42 +66,95 @@ def calcRuleStats(rule_arr, from_greater_than_1, to_greater_than_1, both_greater
                 rule_to = rule_to.split('_')[0]
                 categorized_to = att_to_category[rule_to]
 
-                if f'{categorized_from} -> {categorized_to}' not in new_rules_general and f'{categorized_from} -> {categorized_to}' not in cur_rule_track:
-                    new_rules_general[f'{categorized_from} -> {categorized_to}'] = 1
-                    cur_rule_track[f'{categorized_from} -> {categorized_to}'] = 1
-                elif f'{categorized_from} -> {categorized_to}' not in cur_rule_track:
-                    new_rules_general[f'{categorized_from} -> {categorized_to}'] += 1
-                    cur_rule_track[f'{categorized_from} -> {categorized_to}'] = 1
+                if (categorized_from, categorized_to) not in new_rules_general and (categorized_from, categorized_to) not in cur_rule_track:
+                    new_rules_general[(categorized_from, categorized_to)] = 1
+                    cur_rule_track[(categorized_from, categorized_to)] = 1
+                elif (categorized_from, categorized_to) not in cur_rule_track:
+                    new_rules_general[(categorized_from, categorized_to)] += 1
+                    cur_rule_track[(categorized_from, categorized_to)] = 1
+
     # sort new_rules_general
     new_rules_general = {item[0]:item[1] for item in sorted(new_rules_general.items(), key=lambda x: x[1], reverse=True)}
+
+    # output new_rules_general to file called generalized_rules_{dataset}.txt
+    with open(f'analysis_outputs/generalized_rules_{DATASET}.txt', 'w') as f:
+        for rule, count in new_rules_general.items():
+            f.write(f'{rule[0]} ====> {rule[1]}: {count}\n')
+        f.close()
+
+    unique_categories = {} # like a set that maintains insertion order
+    for rule_key in new_rules_general.keys():
+        if rule_key[0] not in unique_categories:
+            unique_categories[rule_key[0]] = 1
+        if rule_key[1] not in unique_categories:
+            unique_categories[rule_key[1]] = 1
+
+    # initialize dataframe of zeros with rows as from categories and columns as to categories
+    df_from = pd.DataFrame(0, index=unique_categories.keys(), columns=unique_categories.keys())
+
+    for rule_key_val, val in new_rules_general.items():
+        df_from.loc[rule_key_val[0], rule_key_val[1]] = val
+
     print(new_rules_general)
-    # # dictionaries maintain order in python 3.9, so can do this
-    # rule_keys = list(new_rules_general.keys())
 
-    # rule_vals = list(new_rules_general.values())
-    # rule_vals_sum = sum(rule_vals)
-    # for val in 
+    # figsize=(10, 10)
+    fig, ax = plt.subplots()
+    im = ax.imshow(df_from.to_numpy())
+    ax.set_xticks(np.arange(len(unique_categories.keys())), labels=unique_categories.keys())
+    ax.set_yticks(np.arange(len(unique_categories.keys())), labels=unique_categories.keys())
 
-    # # pruning off rules for display less than 1.5% of total
+    plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
+         rotation_mode="anchor")
 
-    # print(rule_keys)
-    # print(rule_vals)
+    # Loop over data dimensions and create text annotations.
+    for i in range(len(unique_categories.keys())):
+        for j in range(len(unique_categories.keys())):
+            text = ax.text(j, i, df_from.to_numpy()[i, j],
+                        ha="center", va="center", color="black")
 
-    # fig1, ax1 = plt.subplots()
-    # ax1.set_title('Distribution of Generalized Singlet Rules - Alcohol Dataset Combined')
-    # ax1.pie(rule_vals, labels=rule_keys, autopct='%1.1f%%',
-    #     shadow=True, startangle=90)
-    # ax1.axis('equal')
-    # plt.show()
+    ax.set_title(f'Distribution of Generalized Singlet Rules - Alcohol Dataset {DATASET}')
+    fig.tight_layout()
+    # set y label as from rule
+    ax.set_ylabel('From Attribute Type')
+    # set x label as to rule
+    ax.set_xlabel('To Attribute Type')
+    plt.show()
 
-    
+def combinedSepAnalysis(MIN_SUPP, MIN_CONF, PRUNE, attr_to_cat):
+    # iterate through all files in outputs rules
+    # get rules that appear in seperate, combined datasets
+    combined_fp = f'outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_combined_prune_{PRUNE}.txt'
+    mat_fp = f'outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_mat_prune_{PRUNE}.txt'
+    por_fp = f'outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_por_prune_{PRUNE}.txt'
 
+    rule_arr_combined, from_greater_than_1_combined, to_greater_than_1_combined, both_greater_than_1_combined, both_less_than_2_combined = getBasicRuleStats(combined_fp)
+    rule_arr_mat, from_greater_than_1_mat, to_greater_than_1_mat, both_greater_than_1_mat, both_less_than_2_mat = getBasicRuleStats(mat_fp)
+    rule_arr_por, from_greater_than_1_por, to_greater_than_1_por, both_greater_than_1_por, both_less_than_2_por = getBasicRuleStats(por_fp)
 
-    
+    rule_dict_combined = {(rule['from'], rule['to']):0 for rule in rule_arr_combined}
+    rule_dict_mat = {(rule['from'], rule['to']):0 for rule in rule_arr_mat}
+    rule_dict_por = {(rule['from'], rule['to']):0 for rule in rule_arr_por}
+
+    # get keys that are present in all three dictionaries
+    overlap_rules = rule_dict_combined.keys() & rule_dict_mat.keys() & rule_dict_por.keys()
+    overlap_rules_stats = [{'from':rule[0], 'to':rule[1], 'confidence': 'NA'} for rule in overlap_rules]
+    calcRuleStats(overlap_rules_stats, attr_to_cat, 'Overlap')
+
+    out_fp = f'analysis_outputs/rule_overlap_{MIN_SUPP}_conf_{MIN_CONF}_prune_{PRUNE}.txt'
+    with open(out_fp, 'w') as f:
+        f.write(str(len(overlap_rules)) + '\n')
+        for rule in overlap_rules:
+            f.write(f'{rule[0]} => {rule[1]}\n')
 
 if __name__ == '__main__':
-    items_fp = 'outputs/apriori_items_supp_0.45.txt'
-    rules_fp = 'outputs/apriori_rules_supp_0.45_conf_0.85.txt'
+    MIN_SUPP = 0.45
+    MIN_CONF = 0.8
+    DATASET = 'combined'
+    PRUNE = True
+    ANALYZE_COMBINED = True
+
+    items_fp = f'outputs/apriori_items_supp_{MIN_SUPP}_{DATASET}_prune_{PRUNE}.txt'
+    rules_fp = f'outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_{DATASET}_prune_{PRUNE}.txt'
 
     categories = {'demographics':0, 'financial/accessibility':0, 'education_history':0, 'familial':0, 'social/extra-cirricular':0,
                   'alcohol_consumption':0, 'health':0, 'reason_for_attending_this_school':0, 'class_type':0, 'future_education_pursuit':0,
@@ -154,6 +209,9 @@ if __name__ == '__main__':
     print(f'Item <2: {len(item_less_than_2)}')
     print(f'Num. Items: {len(item_arr)}')
 
-    calcRuleStats(rule_arr, from_greater_than_1, to_greater_than_1, both_greater_than_1, both_less_than_2, attribute_categorization)
+    if ANALYZE_COMBINED:
+        combinedSepAnalysis(MIN_SUPP, MIN_CONF, PRUNE, attribute_categorization)
+
+    calcRuleStats(rule_arr, attribute_categorization, DATASET)
 
 

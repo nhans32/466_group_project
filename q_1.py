@@ -59,7 +59,7 @@ def createBins(df):
 
     df.rename(columns={'binned_absences': 'absences', 'binned_G1': 'G1', 'binned_G2': 'G2', 'binned_G3': 'G3'}, inplace=True)
 
-    df = oneHotEncode(df, ['absences', 'G1', 'G2', 'G3'])
+    # df = oneHotEncode(df, ['absences', 'G1', 'G2', 'G3'])
     return df
 
 def pruneAndOutputDF(df, output_file):
@@ -86,16 +86,16 @@ def oneHotEncode(df, one_hot_vars):
 
     return df
 
-def outputItemsRules(items, rules, min_supp, min_conf):
+def outputItemsRules(items, rules, min_supp, min_conf, dataset, prune):
     # open output file outputs/apriori_items_min_supp_0.1_min_conf_0.5.txt
     items_sort = sorted(items, key=lambda x: x[1], reverse=True)
-    with open(f'outputs/apriori_items_supp_{min_supp}.txt', 'w') as f:
+    with open(f'outputs/apriori_items_supp_{min_supp}_{dataset}_prune_{prune}.txt', 'w') as f:
         for item in items_sort:
             f.write(f'{item[0]} with support: {item[1]}\n')
         f.close()
     
     rules_sort = sorted(rules, key=lambda x: x[1], reverse=True)
-    with open(f'outputs/apriori_rules_supp_{min_supp}_conf_{min_conf}.txt', 'w') as f:
+    with open(f'outputs/apriori_rules_supp_{min_supp}_conf_{min_conf}_{dataset}_prune_{prune}.txt', 'w') as f:
         for rule in rules_sort:
             f.write(f'{rule[0][0]} ====> {rule[0][1]} with confidence: {rule[1]}\n')
         f.close()
@@ -103,31 +103,55 @@ def outputItemsRules(items, rules, min_supp, min_conf):
 if __name__ == '__main__':
     MIN_SUPP = 0.45
     MIN_CONF = 0.85
+    # can be 'combined', 'mat' or 'por'
+    DATASET = 'combined'
+    PRUNE = True
 
-    # TODO: Run analysis for datasets individually and see if there is a difference in the results
+    hot_encoding_vars = ['school', 'sex', 'age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu', 'Mjob', 'Fjob', 'reason', 'guardian',
+                         'traveltime', 'studytime', 'failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet',
+                         'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2', 'G3']
 
-    # # open hot-encodded into a dataframe
-    # df_combined = pd.read_pickle('data/alcohol_dataset.pkl')
-    df_mat = pd.read_csv('data/student-mat.csv')
-    df_mat['class_type'] = 'mat'
-    df_por = pd.read_csv('data/student-por.csv')
-    df_por['class_type'] = 'por'
-    df_combined = pd.concat([df_mat, df_por], axis=0)
-    # reset index of combined dataframe, if don't do this - will run out of memory FASSSTTT
-    df_combined = df_combined.reset_index(drop=True)
+    if DATASET == 'mat':
+        df_main = pd.read_csv('data/student-mat.csv')
+    elif DATASET == 'por':
+        df_main = pd.read_csv('data/student-por.csv')
+    elif DATASET == 'combined':
+        df_mat = pd.read_csv('data/student-mat.csv')
+        df_mat['class_type'] = 'mat'
+        df_por = pd.read_csv('data/student-por.csv')
+        df_por['class_type'] = 'por'
+        df_combined = pd.concat([df_mat, df_por], axis=0)
+        # reset index of combined dataframe, if don't do this - will run out of memory FASSSTTT
+        df_combined = df_combined.reset_index(drop=True)
+        # account for class type
+        hot_encoding_vars.append('class_type')
+        df_main = df_combined
+        print(hot_encoding_vars)
+
+    # discretizing the continous variables and final hot encoding of these variables
+    df_main = createBins(df_main)
+
+    if PRUNE:
+        # percentage of dataframe the most freq value in column takes up
+        top_val_counts = {}
+        for var in hot_encoding_vars:
+            top_val_counts[var] = list(df_main[var].value_counts())[0]/len(df_main)
+
+        # prune off columns with most freq value making up >=85% of dataframe
+        # if top_val_counts[var] >= 0.85: remove var from hot_encoding_vars and df_main
+        for key, val in top_val_counts.items():
+            if val >= 0.85:
+                hot_encoding_vars.remove(key)
+                df_main = df_main.drop(key, axis=1)
 
     # one hot encoding for the rest of the rows
-    df_combined = oneHotEncode(df_combined, ['school', 'sex', 'age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu', 'Mjob', 'Fjob', 'reason', 'guardian',
-                                             'traveltime', 'studytime', 'failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet',
-                                             'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'class_type'])
-    # discretizing the continous variables and final hot encoding of these variables
-    df_combined = createBins(df_combined)
+    df_main = oneHotEncode(df_main, hot_encoding_vars)
 
-    pruneAndOutputDF(df_combined, 'data/alcohol_dataset_apriori.csv')
+    pruneAndOutputDF(df_main, f'data/alcohol_dataset_apriori_{DATASET}_prune_{PRUNE}.csv')
     # output csv file named data/test.csv
-    df_combined.to_csv('data/hot_encoded_alcohol_dataset.csv', index=False)
+    df_main.to_csv(f'data/hot_encoded_alcohol_dataset_{DATASET}_prune_{PRUNE}.csv', index=False)
 
-    inFile = dataFromFile('data/alcohol_dataset_apriori.csv')
+    inFile = dataFromFile(f'data/alcohol_dataset_apriori_{DATASET}_prune_{PRUNE}.csv')
     items, rules = runApriori(inFile, MIN_SUPP, MIN_CONF)
 
-    outputItemsRules(items, rules, MIN_SUPP, MIN_CONF)
+    outputItemsRules(items, rules, MIN_SUPP, MIN_CONF, DATASET, PRUNE)
