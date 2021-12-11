@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import json
-import matplotlib.pyplot as plt
 from kmeans import euclid_distances
 import linecache
 import sys
@@ -154,5 +153,6 @@ if __name__ == "__main__":
 
         create_output(assignments)
 
-    #plt.scatter(assignments.iloc[:,1], assignments.iloc[:,2], c=assignments.iloc[:,-1])
-    #plt.show()
+    # import matplotlib.pyplot as plt
+    # plt.scatter(assignments.iloc[:,1], assignments.iloc[:,2], c=assignments.iloc[:,-1])
+    # plt.show()

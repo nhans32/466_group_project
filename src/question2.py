@@ -9,6 +9,7 @@ from kmeans import k_means, euclid_distances
 from hclustering import agglomerative, get_clusters, get_leaf_nodes
 from dbscan import DBSCAN, buildPointList, pointListToClusterList, centeroidnp
 
+
 def createDotPlot(clusters, target, title):
     grade = (target / 20) * 100
     bin_ids = np.arange(0, 100, 2)
@@ -21,6 +22,7 @@ def createDotPlot(clusters, target, title):
     plt.xlabel("Final Grades")
     plt.ylabel("Count")
     plt.show()
+
 
 def createBarPlot(clusters, target, title):
     grade = target / 20
@@ -52,7 +54,8 @@ def createBarPlot(clusters, target, title):
     plt.xlabel("Grade")
     plt.title(title)
     plt.show()
-    
+
+
 ###################
 ## Control Panel ##
 ###################
@@ -71,7 +74,6 @@ k = 5  # Used by K-Means and Hierarchical Clustering
 threshold = 25  # Used as starting for Hierarchical Clsutering
 epsilon = 3.5  # Used by DBSCAN
 numPoints = 4  # Used by DBSCAN
-
 
 
 with open("data/alcohol_dataset.pkl", "rb") as file:

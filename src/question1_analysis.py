@@ -3,6 +3,7 @@ import matplotlib as mpl
 import pandas as pd
 import numpy as np
 
+
 def getBasicRuleStats(rules_fp):
     rule_arr = []
     from_greater_than_1 = []
@@ -35,6 +36,7 @@ def getBasicRuleStats(rules_fp):
             rule_arr.append(rule_f)
     return rule_arr, from_greater_than_1, to_greater_than_1, both_greater_than_1, both_less_than_2
 
+
 def getBasicItemStats(items_fp):
     item_arr = []
     item_greater_than_1 = []
@@ -53,6 +55,7 @@ def getBasicItemStats(items_fp):
                 item_less_than_2.append({'set': item_set, 'support': supp})
             item_arr.append({'set': item_set, 'support': supp})
     return item_arr, item_greater_than_1, item_less_than_2
+
 
 def calcRuleStats(rule_arr, att_to_category, DATASET):
     # print(rule_arr)
@@ -78,7 +81,7 @@ def calcRuleStats(rule_arr, att_to_category, DATASET):
     new_rules_general = {item[0]:item[1] for item in sorted(new_rules_general.items(), key=lambda x: x[1], reverse=True)}
 
     # output new_rules_general to file called generalized_rules_{dataset}.txt
-    with open(f'analysis_outputs/generalized_rules_{DATASET}.txt', 'w') as f:
+    with open(f'../analysis_outputs/generalized_rules_{DATASET}.txt', 'w') as f:
         for rule, count in new_rules_general.items():
             f.write(f'{rule[0]} ====> {rule[1]}: {count}\n')
         f.close()
@@ -127,12 +130,13 @@ def calcRuleStats(rule_arr, att_to_category, DATASET):
 
     plt.show()
 
+
 def combinedSepAnalysis(MIN_SUPP, MIN_CONF, PRUNE, attr_to_cat):
     # iterate through all files in outputs rules
     # get rules that appear in seperate, combined datasets
-    combined_fp = f'outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_combined_prune_{PRUNE}.txt'
-    mat_fp = f'outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_mat_prune_{PRUNE}.txt'
-    por_fp = f'outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_por_prune_{PRUNE}.txt'
+    combined_fp = f'../outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_combined_prune_{PRUNE}.txt'
+    mat_fp = f'../outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_mat_prune_{PRUNE}.txt'
+    por_fp = f'../outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_por_prune_{PRUNE}.txt'
 
     rule_arr_combined, from_greater_than_1_combined, to_greater_than_1_combined, both_greater_than_1_combined, both_less_than_2_combined = getBasicRuleStats(combined_fp)
     rule_arr_mat, from_greater_than_1_mat, to_greater_than_1_mat, both_greater_than_1_mat, both_less_than_2_mat = getBasicRuleStats(mat_fp)
@@ -147,11 +151,12 @@ def combinedSepAnalysis(MIN_SUPP, MIN_CONF, PRUNE, attr_to_cat):
     overlap_rules_stats = [{'from':rule[0], 'to':rule[1], 'confidence': 'NA'} for rule in overlap_rules]
     calcRuleStats(overlap_rules_stats, attr_to_cat, 'Overlap')
 
-    out_fp = f'analysis_outputs/rule_overlap_{MIN_SUPP}_conf_{MIN_CONF}_prune_{PRUNE}.txt'
+    out_fp = f'../analysis_outputs/rule_overlap_{MIN_SUPP}_conf_{MIN_CONF}_prune_{PRUNE}.txt'
     with open(out_fp, 'w') as f:
         f.write(str(len(overlap_rules)) + '\n')
         for rule in overlap_rules:
             f.write(f'{rule[0]} => {rule[1]}\n')
+
 
 if __name__ == '__main__':
     MIN_SUPP = 0.45
@@ -160,8 +165,8 @@ if __name__ == '__main__':
     PRUNE = True
     ANALYZE_COMBINED = True
 
-    items_fp = f'outputs/apriori_items_supp_{MIN_SUPP}_{DATASET}_prune_{PRUNE}.txt'
-    rules_fp = f'outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_{DATASET}_prune_{PRUNE}.txt'
+    items_fp = f'../outputs/apriori_items_supp_{MIN_SUPP}_{DATASET}_prune_{PRUNE}.txt'
+    rules_fp = f'../outputs/apriori_rules_supp_{MIN_SUPP}_conf_{MIN_CONF}_{DATASET}_prune_{PRUNE}.txt'
 
     categories = {'demographics':0, 'financial/accessibility':0, 'education_history':0, 'familial':0, 'social/extra-cirricular':0,
                   'alcohol_consumption':0, 'health':0, 'reason_for_attending_this_school':0, 'class_type':0, 'future_education_pursuit':0,

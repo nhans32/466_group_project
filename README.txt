@@ -25,5 +25,30 @@ The original dataset from Kaggle is student-mat.csv and student-por.csv in /data
 The merged and preprocessed dataset is alcohol_dataset.pkl in /data.
 Scripts containing code to generate statistics/ discover insights for each question is labeled questionX.py in the /src folder, where X is an integer corresponding to the question number.
 Parameters can be modified in the main functions.
+
+===================
+For Question 1:
 Outputs from question1.py located in /outputs/.
 Outputs from q1_analysis.py located in /analysis_outputs/.
+
+===================
+For Question 2:
+The control panel starts at line 59, which is used to change parameters for clustering.
+
+Control panel options:
+- minMax : if true it min/max scales all columns of the dataset
+- norm : if true normalizes all columns of the dataset
+- nothing : if true doesn't drop the target column
+
+- kmeans : if true runs K-Means algorithm
+- heirac : if true runs Hierarcichal Clustering
+- dbscan : if true runs the DBSAN algorithm
+
+- find_clusters : if true does parameter tuning and creates graph of Total SSE
+
+===================
+For Question 3:
+Commented out code was used to generate statistics, but is not run for simplicity's sake.
+
+===================
+For Question 4:

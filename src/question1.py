@@ -1,10 +1,7 @@
 import pandas as pd
-import numpy as np
-import itertools
-import re
 import sys
 
-sys.path.insert(0, 'Apriori-python3/')
+sys.path.insert(0, '../Apriori-python3/')
 from apriori import *
 
 # hard coded bins for various variables (ie whose continous vars have too many unique values to be raw one hot encoded)
@@ -74,6 +71,7 @@ def pruneAndOutputDF(df, output_file):
                     f.write('\n')
         f.close()
 
+
 # further hot encoding for the alcohol dataset
 def oneHotEncode(df, one_hot_vars):
     for var in one_hot_vars:
@@ -89,16 +87,17 @@ def oneHotEncode(df, one_hot_vars):
 def outputItemsRules(items, rules, min_supp, min_conf, dataset, prune):
     # open output file outputs/apriori_items_min_supp_0.1_min_conf_0.5.txt
     items_sort = sorted(items, key=lambda x: x[1], reverse=True)
-    with open(f'outputs/apriori_items_supp_{min_supp}_{dataset}_prune_{prune}.txt', 'w') as f:
+    with open(f'../outputs/apriori_items_supp_{min_supp}_{dataset}_prune_{prune}.txt', 'w') as f:
         for item in items_sort:
             f.write(f'{item[0]} with support: {item[1]}\n')
         f.close()
-    
+
     rules_sort = sorted(rules, key=lambda x: x[1], reverse=True)
-    with open(f'outputs/apriori_rules_supp_{min_supp}_conf_{min_conf}_{dataset}_prune_{prune}.txt', 'w') as f:
+    with open(f'../outputs/apriori_rules_supp_{min_supp}_conf_{min_conf}_{dataset}_prune_{prune}.txt', 'w') as f:
         for rule in rules_sort:
             f.write(f'{rule[0][0]} ====> {rule[0][1]} with confidence: {rule[1]}\n')
         f.close()
+
 
 if __name__ == '__main__':
     MIN_SUPP = 0.45
@@ -112,13 +111,13 @@ if __name__ == '__main__':
                          'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2', 'G3']
 
     if DATASET == 'mat':
-        df_main = pd.read_csv('data/student-mat.csv')
+        df_main = pd.read_csv('../data/student-mat.csv')
     elif DATASET == 'por':
-        df_main = pd.read_csv('data/student-por.csv')
+        df_main = pd.read_csv('../data/student-por.csv')
     elif DATASET == 'combined':
-        df_mat = pd.read_csv('data/student-mat.csv')
+        df_mat = pd.read_csv('../data/student-mat.csv')
         df_mat['class_type'] = 'mat'
-        df_por = pd.read_csv('data/student-por.csv')
+        df_por = pd.read_csv('../data/student-por.csv')
         df_por['class_type'] = 'por'
         df_combined = pd.concat([df_mat, df_por], axis=0)
         # reset index of combined dataframe, if don't do this - will run out of memory FASSSTTT
@@ -147,11 +146,11 @@ if __name__ == '__main__':
     # one hot encoding for the rest of the rows
     df_main = oneHotEncode(df_main, hot_encoding_vars)
 
-    pruneAndOutputDF(df_main, f'data/alcohol_dataset_apriori_{DATASET}_prune_{PRUNE}.csv')
+    pruneAndOutputDF(df_main, f'../data/alcohol_dataset_apriori_{DATASET}_prune_{PRUNE}.csv')
     # output csv file named data/test.csv
-    df_main.to_csv(f'data/hot_encoded_alcohol_dataset_{DATASET}_prune_{PRUNE}.csv', index=False)
+    df_main.to_csv(f'../data/hot_encoded_alcohol_dataset_{DATASET}_prune_{PRUNE}.csv', index=False)
 
-    inFile = dataFromFile(f'data/alcohol_dataset_apriori_{DATASET}_prune_{PRUNE}.csv')
+    inFile = dataFromFile(f'../data/alcohol_dataset_apriori_{DATASET}_prune_{PRUNE}.csv')
     items, rules = runApriori(inFile, MIN_SUPP, MIN_CONF)
 
     outputItemsRules(items, rules, MIN_SUPP, MIN_CONF, DATASET, PRUNE)

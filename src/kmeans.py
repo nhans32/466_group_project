@@ -1,14 +1,15 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import linecache
 import sys
+
 
 def euclid_distances(X, centroids):
     distances = pd.DataFrame()
     for cluster in range(len(centroids)):
         distances[cluster] = np.sqrt(((X - centroids[cluster]) ** 2).sum(axis=1))
     return distances
+
 
 def select_Centroids(data, k):
     X = data.copy()
@@ -23,6 +24,7 @@ def select_Centroids(data, k):
         X = X.reset_index(drop=True).drop(index)
     return centroids
 
+
 def k_means(data, k):
     X = data.copy()
     centroids = select_Centroids(X, k)
@@ -36,12 +38,14 @@ def k_means(data, k):
             break
     return clusters
 
+
 def exitHelpMessage(error = None):
     if error is not None: print(error)
     print('USAGE: python kmeans.py <Filename> <k>')
     print('- <Filename> is the name of the CSV file containing the input dataset.')
     print('- <k> is the number of clusters the program has to produce.')
     exit(-1)
+
 
 def handleCommandLineParams(arguments):
     if len(arguments) == 3:
@@ -50,6 +54,7 @@ def handleCommandLineParams(arguments):
         except: exitHelpMessage("Argument k is not an int")
     else: exitHelpMessage("Argument count incorrect")
     return fileName, k
+
 
 def readData(fileName, dropcols = []):
     try: df = pd.read_csv(fileName, skiprows = 1, header = None)
@@ -84,6 +89,7 @@ def create_output(data):
         for point in range(len(subset)): print(list(subset.iloc[point]))
         print ('------------------------------------')
 
+
 if __name__ == "__main__":
     TESTING = False
     if TESTING:
@@ -98,5 +104,6 @@ if __name__ == "__main__":
 
     create_output(clusters)
 
-    #plt.scatter(clusters.iloc[:,0], clusters.iloc[:,1], c=clusters.clusters)
-    #plt.show()
+    # import matplotlib.pyplot as plt
+    # plt.scatter(clusters.iloc[:,0], clusters.iloc[:,1], c=clusters.clusters)
+    # plt.show()
