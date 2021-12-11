@@ -53,28 +53,33 @@ def createBarPlot(clusters, target, title):
     plt.title(title)
     plt.show()
     
+###################
+## Control Panel ##
+###################
+target_name = "G3"
+minMax = False  # Min / Max scale all columns
+normal = False  # Normalize all columns
+nothing = False  # True = don't drop anything | False = drop target_name
+
+kmeans = True  # Run K-Means
+heirac = False  # Run Hierarchical Clustering
+dbscan = False  # Run DBSCANS
+
+find_clusters = False  # True = hyper-parameter tuning | False = run / create graphs
+
+k = 5  # Used by K-Means and Hierarchical Clustering
+threshold = 25  # Used as starting for Hierarchical Clsutering
+epsilon = 3.5  # Used by DBSCAN
+numPoints = 4  # Used by DBSCAN
+
 
 
 with open("data/alcohol_dataset.pkl", "rb") as file:
     df = pickle.load(file)
 
-# Control Panel
-target_name = "G3"
-minMax = False # Min / Max scale all columns
-normal = True # Normalize all columns
-nothing = False # True = don't drop anything | False = drop target_name
-
-kmeans = False # Run K-Means
-heirac = True # Run Hierarchical Clustering
-dbscan = False # Run DBSCANS
-
-find_clusters = True # True = hyper-parameter tuning | False = run / create graphs
-
-
 df = df.reset_index(drop=True)    
 
 target = df[target_name]
-
 
 if nothing:
     data = df
@@ -95,7 +100,6 @@ elif normal:
 
 if kmeans:
     if not find_clusters:
-        k = 5
         kmeans_clusters = k_means(data, k)
         createDotPlot(kmeans_clusters, target, "Kmeans Clustering of Final Grades")
         createBarPlot(kmeans_clusters, target, "Kmeans Clustering of Final Grades")
@@ -124,11 +128,10 @@ if kmeans:
 
 if heirac:
     dendrogram = agglomerative(data)
-    threshold = 25
     if find_clusters:
         threshs = []
         sses = []
-        while threshold > 5:
+        while threshold > k:
             cluster_list = get_clusters(dendrogram, threshold)
             threshs.append(len(cluster_list)+1)
             assignments = pd.DataFrame()
@@ -150,9 +153,8 @@ if heirac:
 
     else:
         cluster_list = get_clusters(dendrogram, threshold)
-        k = 5
-        while len(cluster_list) < k:
-            threshold -= .5
+        while len(cluster_list) < 5:
+            threshold -= .1
             cluster_list = get_clusters(dendrogram, threshold)
         print("Threshold:", threshold)
         print("Num Clusters:", len(cluster_list))
@@ -195,8 +197,6 @@ if dbscan:
         plt.show()
 
     else:
-        epsilon = .8
-        numPoints = 3
         listOfDBPoints = buildPointList(data, 0)
         numClusters = DBSCAN(listOfDBPoints, epsilon, numPoints, 0)
         print("Num Clusters:", numClusters + 1)
@@ -204,6 +204,8 @@ if dbscan:
         combinedDf = pd.DataFrame()
         total_sse = 0
         for index, cluster in enumerate(clustersArr):
+            if index != 0:
+                print(cluster)
             cent = centeroidnp(cluster)
             total_sse += np.square(np.subtract(cluster, cent)).sum()
             combinedDf = pd.concat([combinedDf, pd.concat([pd.DataFrame(cluster), pd.Series(np.repeat(index, len(cluster)))], axis=1)])
