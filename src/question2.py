@@ -76,7 +76,7 @@ epsilon = 3.5  # Used by DBSCAN
 numPoints = 4  # Used by DBSCAN
 
 
-with open("data/alcohol_dataset.pkl", "rb") as file:
+with open("../data/alcohol_dataset.pkl", "rb") as file:
     df = pickle.load(file)
 
 df = df.reset_index(drop=True)    
