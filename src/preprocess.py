@@ -1,7 +1,7 @@
 import pandas as pd
 
-df_1 = pd.read_csv("student-mat.csv")
-df_2 = pd.read_csv("student-por.csv")
+df_1 = pd.read_csv("../data/student-mat.csv")
+df_2 = pd.read_csv("../data/student-por.csv")
 
 # binary flag for class
 df_1["class_type"] = 0
