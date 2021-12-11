@@ -62,7 +62,7 @@ if __name__ == "__main__":
     # If testing mode is enabled, only these hard-coded valus are used, no command line arguments
     TESTING_MODE = True
     VERBOSE = True
-    dataFile = '/Users/otakar/cs/466/466_group_project/data/student-mat.csv'
+    dataFile = '../data/student-mat.csv'
     numAttributes = 10
     numDataPoints = 100
     numTrees = 50
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     if success == -1: exit("Table did not build properly. Fix csv error above and try agin.")
 
     # create file called out/randomForests/results.txt
-    outFile = open("out/randomForests/results.txt", "w")
+    outFile = open("question4_out/randomForests/results.txt", "w")
 
     # Generate 10 folds of data
     srcDF = table.trainingDf

@@ -5,7 +5,7 @@ from sklearn import preprocessing
 if __name__ == '__main__':
     le = preprocessing.LabelEncoder()
     # Converting string labels into numbers.
-    df = pd.read_csv("/Users/otakar/cs/466/466_group_project/data/student-mat.csv", skiprows=[1, 2])
+    df = pd.read_csv("../data/student-mat.csv", skiprows=[1, 2])
     weather_encoded=le.fit_transform(df)
     print(weather_encoded)
 

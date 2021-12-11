@@ -188,7 +188,7 @@ def classifyTrainingSetForest(forestAndTables, evalTable, silent, evalSilent, ou
 if __name__ == "__main__":
     TESTING_MODE = True
     csvFileTEST = 'in\c45Input2\heart.csv'
-    JSONFileTEST = 'out\c45Output\c45Trees\heart_0.1.json'
+    JSONFileTEST = 'question4_out\c45Output\c45Trees\heart_0.1.json'
     SILENT = True
 
     if TESTING_MODE:

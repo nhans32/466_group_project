@@ -31,7 +31,7 @@ information:
 def runEvaluate(df, attributes, attribute_domains, target_var, target_domain, n, threshold, filepath):
     # output file creation
     fileNameArr = filepath.split('/')
-    outFileName = "out/evaluateOutput/" + fileNameArr[len(fileNameArr) - 1].split('.csv')[0] + "-results.out"
+    outFileName = "question4_out/evaluateOutput/" + fileNameArr[len(fileNameArr) - 1].split('.csv')[0] + "-results.out"
 
     if os.path.exists(outFileName):
         os.remove(outFileName)
@@ -121,7 +121,7 @@ def runEvaluate(df, attributes, attribute_domains, target_var, target_domain, n,
 
 if __name__ == "__main__":
     TESTING_MODE = True
-    TRAINING_CSV = "/Users/otakar/cs/466/466_group_project/data/student-mat.csv"
+    TRAINING_CSV = "../data/student-mat.csv"
     RESTRICTIONS_CSV = None
     THRESHOLD = 0.01
     n = 10

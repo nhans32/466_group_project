@@ -313,6 +313,6 @@ if __name__ == "__main__":
     # print json dump to terminal with indent 4
     print(json.dumps(tree_dict, indent=4))
     # json dump to file /out/c45Trees/<filename>_<threshold>.json
-    with open('out/c45Output/c45Trees/' + file_name.split('/')[-1].split('.')[0] + '_' + str(THRESHOLD) + '.json', 'w') as outfile:
+    with open('question4_out/c45Output/c45Trees/' + file_name.split('/')[-1].split('.')[0] + '_' + str(THRESHOLD) + '.json', 'w') as outfile:
         json.dump(tree_dict, outfile, indent=4)
         outfile.close()

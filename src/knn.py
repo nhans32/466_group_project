@@ -129,7 +129,7 @@ if __name__ == '__main__':
     # ********* MUST INSTALL ********* matplotlib and seaborn
     if visulization:
         f = file_name.strip('.csv').split('/')
-        outputImageName = 'out/knnVisualize/' + f[len(f)-1] + '.png'
+        outputImageName = 'question4_out/knnVisualize/' + f[len(f)-1] + '.png'
         visualizeData(df, False, True, outputImageName)
 
     numeric_attributes = []
