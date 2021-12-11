@@ -52,3 +52,8 @@ Commented out code was used to generate statistics, but is not run for simplicit
 
 ===================
 For Question 4:
+Input: 466_group_project/data/[student-mat.csv or student-por.csv]
+Output: 466_group_project/src/question4_out/
+- knn: run knn.py with no options and list of paramters will be returned
+- c45: the paramters used for the experiment are set. Can be modified in the main function near end of the python file.
+- randomForest: run randomForest.py, the paramters used for the experiment are set. Can be modified in the main function near end of the python file.
