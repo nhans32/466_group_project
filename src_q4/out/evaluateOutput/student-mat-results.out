@@ -1,0 +1,19 @@
+Fold 1: Correct: 39 Incorrect: 1
+Fold 2: Correct: 33 Incorrect: 7
+Fold 3: Correct: 37 Incorrect: 3
+Fold 4: Correct: 36 Incorrect: 4
+Fold 5: Correct: 36 Incorrect: 4
+Fold 6: Correct: 32 Incorrect: 7
+Fold 7: Correct: 31 Incorrect: 8
+Fold 8: Correct: 35 Incorrect: 4
+Fold 9: Correct: 33 Incorrect: 6
+Fold 10: Correct: 30 Incorrect: 9
+===========================
+Confusion Matrix: 
+Predicted   GP  MS
+Actual            
+GP         323  26
+MS          27  19
+===========================
+Overall Accuracy: 86.58227848101265
+Average Accuracy: 86.53205128205127
